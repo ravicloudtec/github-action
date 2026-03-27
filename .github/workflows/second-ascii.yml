@@ -1,0 +1,17 @@
+name: Ascii-test
+
+on: push
+jobs:
+  ascii_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: List Current Files
+        run: ls -ltra
+
+      - name: Run ASCII Art Script
+        run: |
+         chmod +x ascii-script.sh
+         ./ascii-script.sh
