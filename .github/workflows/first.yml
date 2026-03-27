@@ -1,4 +1,4 @@
-# .github/workflows/generate-ascii.yml
+# .github/workflows/generate-ascii.ymls
 name: Generate ASCII Artwork
 on:
   push:
