@@ -1,6 +1,13 @@
 name: Ascii-test
 
-on: push
+on:
+ workflow_dispatch:
+ push:
+    branches:
+     - main
+
+
+
 jobs:
   ascii_job:
     runs-on: ubuntu-latest
@@ -13,5 +20,4 @@ jobs:
 
       - name: Run ASCII Art Script
         run: |
-         chmod +x ascii-script.sh
-         ./ascii-script.sh
+           bash ascii-script.sh
